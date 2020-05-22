@@ -1,0 +1,6 @@
+<div class="create-cluster-form">
+    <%= form_tag cluster_path, method: :post do  %>
+        <%= text_field_tag :cluster, "", class: "create-cluster-form--input", placeholder: "Cluster Name", autofocus: true, required: true %>
+        <%= submit_tag "Create", class: "create-cluster-form--submit" %>
+    <% end %>
+</div>
