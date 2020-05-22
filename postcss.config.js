@@ -1,12 +1,19 @@
+const importImport = require("postcss-import");
+const flexBugsFixesImport = require("postcss-flexbugs-fixes");
+const presetEnvImport = require("postcss-preset-env");
+
 module.exports = {
   plugins: [
-    require('postcss-import'),
-    require('postcss-flexbugs-fixes'),
-    require('postcss-preset-env')({
+    importImport,
+    flexBugsFixesImport,
+    presetEnvImport({
       autoprefixer: {
-        flexbox: 'no-2009'
+        flexbox: "no-2009",
       },
-      stage: 3
-    })
-  ]
-}
+      stage: 3,
+      features: {
+        "nesting-rules": true,
+      },
+    }),
+  ],
+};
