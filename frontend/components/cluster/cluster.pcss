@@ -1,0 +1,40 @@
+.cluster {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5em 0.75em;
+
+  & .panel-icon {
+    display: inline-block;
+    font-size: 14px;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    vertical-align: top;
+    width: 1em;
+    color: #7a7a7a;
+    margin-right: 0.75em;
+  }
+
+  & .panel-text {
+    font-weight: 800;
+    margin-right: 0.5rem;
+  }
+
+  & .panel-subtext {
+    font-weight: 100;
+    opacity: 40%;
+  }
+  &:hover,
+  &:focus {
+    background-color: #f5f5f5;
+
+    & .panel-icon {
+      color: #3273dc;
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #ededed;
+  }
+}

@@ -8,6 +8,6 @@ class CounterController < ApplicationController
   private
 
   def associate!
-    redirect_to cluster_path unless session[:cluster]
+    redirect_to cluster_path unless valid_cluster?
   end
 end

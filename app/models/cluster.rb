@@ -4,7 +4,7 @@ require 'securerandom'
 
 # A collective for a tally
 class Cluster
-  attr_reader :count, :name, :status, :uuid
+  attr_reader :count, :name, :status, :uuid, :created_on
   @@clusters = {}
 
   def initialize(name)
@@ -13,6 +13,7 @@ class Cluster
     @count = 0
     @status = :open
     @mutex = Mutex.new
+    @created_on = Time.new
     @@clusters[@uuid] = self
   end
 
