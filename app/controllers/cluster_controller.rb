@@ -9,7 +9,7 @@ class ClusterController < ApplicationController
 
   def create
     cluster = Cluster.new(params[:cluster])
-    session[:cluster_uuid] = cluster.uuid;
+    session[:cluster_uuid] = cluster.uuid
     redirect_to root_path
   end
 

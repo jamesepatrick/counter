@@ -3,7 +3,9 @@
 class CounterController < ApplicationController
   before_action :associate!
 
-  def show; end
+  def show
+    @cluster = Cluster.get(session[:cluster_uuid])
+  end
 
   private
 
