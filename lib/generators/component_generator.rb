@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Generator for building scaffolding frontend components.
 # e.g. rails g component NAME
 class ComponentGenerator < Rails::Generators::Base
