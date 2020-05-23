@@ -8,6 +8,7 @@ class CounterController < ApplicationController
   private
 
   def associate!
+    session[:cluster_uuid] = params[:uuid] if params[:uuid]
     redirect_to cluster_path unless valid_cluster?
   end
 end
